@@ -28,7 +28,7 @@ void backward_step(double arr[], unsigned begin_idx, unsigned end_idx) {
 // ========== 1. Прямой пузырёк ==========
 void bubble_sort_forward(double arr[], unsigned begin_idx, unsigned end_idx) {
     bool swapped;
-    do {
+    while (swapped) {
         swapped = false;
         for (unsigned i = begin_idx; i < end_idx - 1; ++i) {
             if (arr[i] > arr[i+1]) {
@@ -36,13 +36,13 @@ void bubble_sort_forward(double arr[], unsigned begin_idx, unsigned end_idx) {
                 swapped = true;
             }
         }
-    } while (swapped);
+    } 
 }
 
 // ========== 2. Обратный пузырёк ==========
 void bubble_sort_backward(double arr[], unsigned begin_idx, unsigned end_idx) {
     bool swapped;
-    do {
+    while (swapped) {
         swapped = false;
         for (unsigned i = end_idx - 1; i > begin_idx; --i) {
             if (arr[i-1] > arr[i]) {
@@ -50,7 +50,7 @@ void bubble_sort_backward(double arr[], unsigned begin_idx, unsigned end_idx) {
                 swapped = true;
             }
         }
-    } while (swapped);
+    } 
 }
 
 // ========== 3. Шейкерная сортировка ==========
